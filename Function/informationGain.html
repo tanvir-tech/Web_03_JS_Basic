@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoGain</title>
+</head>
+
+<body>
+
+    <script>
+        var x = prompt("Enter x =");
+        var y = prompt("Enter y =");
+        var a = prompt("Enter z =");
+
+        function log(base, number) {
+            return Math.log(number) / Math.log(base);
+        }
+
+        function infoGain(x, y, a) {
+            return -(x / a) * log(2, x / a) - (y / a) * log(2, y / a);
+        }
+
+        document.write("Information gain = "+infoGain(x, y, a));
+        
+    </script>
+
+
+</body>
+
+</html>
